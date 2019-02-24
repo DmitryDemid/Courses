@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Form</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+	<a href="./allWorker.html" class="ref">Вернуться на главную</a>
+	<div class="card">
+		<div class="card-input">
+			<form id="form" onsubmit="return false">
+				<div class="card-input__header">Заполните данные</div>
+				<label for="name">Заполни имя</label>
+				<input name="name" type="text" placeholder="Name">
+				<label for="surname">Фамилию</label>
+				<input name="surname" type="text">
+				<label for="age">Возраст</label>
+				<input id="age" name="age" type="text">
+				<label >Количество детей</label>
+				<input name="child" type="text">
+				<label >Стаж</label>
+				<input name="stage" type="text">
+				<label for="sex">Пол</label>
+				<div class="choise">
+					<input name="sex" type="radio" value='male'>М
+					<input name="sex" type="radio" value='female'>Ж
+				</div>
+				<select class="select" id="company">
+					<option value="transport">Транспортное предприятие</option>
+					<option value="industrial">Индустриальное предприятие</option>
+				</select>
+				<div id="industrial">
+					<label >Завод</label>
+					<input name="factory" type="text">
+					<label >Должность</label>
+					<input name="position" type="text">
+				</div>
+				<div id="transport">
+					<select class="select" id="transportSelect">
+						<option value="road">Железная дорога</option>
+						<option value="aerodrom">Аэродромная служба</option>
+					</select>
+					<label >Специальность</label>
+					<input name="speciality" type="text">
+				</div>
+				<button id="save" onClick="onSave()" type="submit">Сохранить</button>
+			</form>
+		</div>
+	</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
